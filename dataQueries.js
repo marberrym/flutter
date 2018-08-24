@@ -21,10 +21,12 @@ let oneFlutterByUser = (user, postid) => {
             FROM users us
             INNER JOIN flutters pst on us.id = pst.userid
             AND us.name = '` + user + `'
-            AND pst.postid = '` + postid + `;`)
+            AND pst.postid = '` + postid + `';`)
 }
 
 exports.listAllUsers = listAllUsers;
 exports.listAllFlutters = listAllFlutters;
+exports.allFluttersByUser = allFluttersByUser;
+exports.oneFlutterByUser = oneFlutterByUser;
 
 

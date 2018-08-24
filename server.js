@@ -47,13 +47,20 @@ let allFlutters = (req, res) => {
 }
 
 let fluttersByUser = (req, res) => {
-        let userID = req.params.userID;
-        let userFlutters = flutters.filter(flutter => {
-            return flutter.userid === userID
-        });
-        res.send(userFlutters)
+    let userN = req.params.username;
+    q.allFluttersByUser(userN)
+        .then(results => res.send(results))
+}
+
+let specificUserPost = (req, res) => {
+    let userN = req.params.username;
+    let postID = req.params.postid;
+    console.log(req.params)
+    q.oneFlutterByUser(userN, postID)
+        .then(results => res.send(results))
 }
 
 ex.get('/users', authenticate, getUsers);
 ex.get('/flutters', authenticate, allFlutters);
-ex.get('/users/:userID/flutters', authenticate, fluttersByUser);
+ex.get('/users/:username/flutters', authenticate, fluttersByUser);
+ex.get('/users/:username/:postid', authenticate, specificUserPost)

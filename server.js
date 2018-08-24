@@ -8,8 +8,8 @@
 // post /squabs => takes some json and create a new squab
 
 let users = [
-    {id: '1', name: 'Jaydoe', email: 'jayjay@jay.com'},
-    {id: '2', name: 'XXXTentacion', email:'sonotdead@hiphop.com'}
+    {id: '1', name: 'Jaydoe', email: 'jayjay@jay.com', pw: 'shimmy'},
+    {id: '2', name: 'XXXTentacion', email:'sonotdead@hiphop.com', pw: 'dondon'}
 ]
 
 let flutters = [
@@ -25,7 +25,10 @@ let ex = express();
 ex.listen(3000);
 
 let authenticate = (req, res, next) => {
-    if (req.query.password === 'opensesame') {
+    let currentUser = users.find((user) => req.query.ident === user.id)
+    console.log(currentUser);
+    console.log(req.query)
+    if (currentUser && req.query.pass === currentUser.pw) {
         next();
     } else {
         res.end('You shall not pass');

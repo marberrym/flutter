@@ -42,12 +42,13 @@ body {
     display: flex;
     flex-direction: column;
     align-content: center;
+    overflow-y: auto;
 }
 
 .post {
-    flex-basis: 20%;
+    height: 20em;
     text-align: center;
-    border: 1px solid black;
+    border-top: 1px solid black;
     border-radius: 2em;
     border-bottom: none
 }

@@ -10,13 +10,15 @@ body {
 
 .mainFlex {
     display: flex;
-    direction: column;
+    flex-direction: column;
     flex-basis: 90%;
     margin: 2%;
     background-color: lightblue;
     height: 100vh;
     border-radius: 2em;
-    justify-content: center;
+    justify-content: flex-start;
+    align-items: center;
+    border: 1px solid black;
 }
 
 .logo {
@@ -29,4 +31,23 @@ body {
 		1px -1px 0 #000,
 		-1px 1px 0 #000,
 		1px 1px 0 #000;
+}
+
+.posts {
+    background-color: whitesmoke;
+    flex-basis: 70%;
+    width: 90%;
+    border-radius: 2em;
+    border: 1px solid black;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+}
+
+.post {
+    flex-basis: 20%;
+    text-align: center;
+    border: 1px solid black;
+    border-radius: 2em;
+    border-bottom: none
 }

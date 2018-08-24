@@ -6,6 +6,7 @@
 // get /squabs => JSON list of all squabs by all users
 // get /squabs/id => JSON object of specific squabs
 // post /squabs => takes some json and create a new squab
+const q = require('./dataQueries');
 
 let users = [
     {id: '1', name: 'Jaydoe', email: 'jayjay@jay.com', pw: 'shimmy'},
@@ -36,7 +37,13 @@ let authenticate = (req, res, next) => {
 }
 
 let getUsers = (req, res) => {
-        res.send(users);
+    q.listAllUsers()
+        .then(results => res.send(results))
+}
+
+let allFlutters = (req, res) => {
+    q.listAllFlutters()
+        .then(results => res.send(results))
 }
 
 let fluttersByUser = (req, res) => {
@@ -48,4 +55,5 @@ let fluttersByUser = (req, res) => {
 }
 
 ex.get('/users', authenticate, getUsers);
+ex.get('/flutters', authenticate, allFlutters);
 ex.get('/users/:userID/flutters', authenticate, fluttersByUser);

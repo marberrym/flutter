@@ -24,6 +24,11 @@ let oneFlutterByUser = (user, postid) => {
             AND pst.postid = '` + postid + `';`)
 }
 
+let postFlutter = (user, body) => {
+    return db.one(`INSERT INTO flutters (userid, body) values 
+            ('` + user + `', ` + body + `');`);
+}
+
 exports.listAllUsers = listAllUsers;
 exports.listAllFlutters = listAllFlutters;
 exports.allFluttersByUser = allFluttersByUser;

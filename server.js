@@ -64,3 +64,5 @@ ex.get('/users', authenticate, getUsers);
 ex.get('/flutters', authenticate, allFlutters);
 ex.get('/users/:username/flutters', authenticate, fluttersByUser);
 ex.get('/users/:username/:postid', authenticate, specificUserPost)
+
+//ex.post(`/users/:username/flutters`), authenticate, 

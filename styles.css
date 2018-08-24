@@ -1,0 +1,32 @@
+body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+    background-color: whitesmoke;
+    display: flex;
+    justify-content: center;
+}
+
+.mainFlex {
+    display: flex;
+    direction: column;
+    flex-basis: 90%;
+    margin: 2%;
+    background-color: lightblue;
+    height: 100vh;
+    border-radius: 2em;
+    justify-content: center;
+}
+
+.logo {
+    font-size: 3em; 
+    transform: translateY(.6em) translateX(-.5em); 
+    color: whitesmoke;
+    font-family: 'Righteous', cursive;
+    text-shadow:
+		-1px -1px 0 #000,
+		1px -1px 0 #000,
+		-1px 1px 0 #000,
+		1px 1px 0 #000;
+}

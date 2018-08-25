@@ -46,7 +46,7 @@ body {
 }
 
 .post {
-    height: 20em;
+    flex-basis: 50%;
     text-align: center;
     border-top: 1px solid black;
     border-radius: 2em;

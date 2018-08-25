@@ -61,7 +61,7 @@ let specificUserPost = (req, res) => {
 }
 
 ex.get('/users', authenticate, getUsers);
-ex.get('/flutters', authenticate, allFlutters);
+ex.get('/flutters', allFlutters);
 ex.get('/users/:username/flutters', authenticate, fluttersByUser);
 ex.get('/users/:username/:postid', authenticate, specificUserPost)
 

@@ -10,10 +10,10 @@ var myInit = {
 };
 
 //const myReq = new Request('https://localhost:3000/flutters', myInit)
-let requesturl = 'http://localhost:3000/flutters'
+//let requesturl = 'http://localhost:3000/flutters'
 
 
-fetch(requesturl, myInit)
+fetch('http://localhost:3000/flutters', myInit)
     .then(response => {
         if (response.status === 200) {
             console.log(response);

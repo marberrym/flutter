@@ -35,20 +35,56 @@ body {
 
 .posts {
     background-color: whitesmoke;
-    flex-basis: 70%;
+    height: 70%;
     width: 90%;
     border-radius: 2em;
     border: 1px solid black;
-    display: flex;
-    flex-direction: column;
-    align-content: center;
-    overflow-y: auto;
+    overflow-y: scroll;
 }
 
 .post {
-    flex-basis: 50%;
+    height: 20%;
     text-align: center;
     border-top: 1px solid black;
     border-radius: 2em;
-    border-bottom: none
+    border-bottom: none;
+    display: flex;
+    flex-direction: column;
+}
+
+.postHead {
+    flex-basis: 50%;
+    text-align: left;
+    display: flex;
+    align-items: center;
+    margin-left: 1em;
+    margin-top: .5em;
+}
+
+.profileIMG {
+    height: 3em;
+    width: 3em;
+    border-radius: .5em;
+}
+
+.flutterHead {
+    color: lightblue;
+    text-shadow:
+		-1px -1px 0 #000,
+		1px -1px 0 #000,
+		-1px 1px 0 #000,
+        1px 1px 0 #000;
+    font-family: 'Righteous', cursive;
+    font-size: 1.5em;
+    margin-left: .5em;
+}
+
+.postText {
+    font-family: 'Roboto Condensed', sans-serif;
+    font-size: .9em;
+}
+.postContent {
+    flex-basis: 50%;
+    margin-left: .5em;
+    margin-right: .5em;
 }

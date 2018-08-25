@@ -3,9 +3,9 @@ var myInit = {
     method: 'GET',
     mode: 'no-cors',
     cache: 'default',
-    headers: {
-        'Access-Control-Allow-Origin':'*'
-    },
+    // headers: {
+    //     'Access-Control-Allow-Origin':'*'
+    // },
     body: null,
 };
 
@@ -14,7 +14,7 @@ var myInit = {
 
 
 fetch('http://localhost:3000/flutters', myInit)
-    .then(response => {
+    .then(response => {console.log(response)
         if (response.status === 200) {
             console.log(response);
         } else {
